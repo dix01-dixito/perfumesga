@@ -1,16 +1,25 @@
-header{
-    background-color: gainsboro;
-    border-bottom: 1px solid #DCC7A0;
+/* Base y estructura */
 
+header {
+  background-color: gainsboro;
+  border-bottom: 1px solid #DCC7A0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
 body {
-    padding-top: 70px;
-    background-color: #e3dbd4;
+  padding-top: 70px;
+  background-color: #e3dbd4;
   color: #2B2B2B;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-h2{
+
+h2 {
   font-family: 'Playfair Display', serif;
   color: #2B2B2B;
   font-size: 1.8rem;
@@ -18,28 +27,32 @@ h2{
   margin-top: 1rem;
   margin-left: 1rem;
 }
+
 p, span, small {
   color: #5A5A5A;
 }
 
 .perfume {
-    color: #2b2b2b;
-    text-align: justify;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: #2b2b2b;
+  text-align: justify;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
+
+/* Botones */
 
 .button {
-    color: #1C1C1C;
-    border: transparent;
-    background-color: transparent;
-    padding: 8px;
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.3 ease-in-out;
-
+  color: #1C1C1C;
+  border: transparent;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
 }
+
+/* Barra de búsqueda */
 
 .search-container {
   display: flex;
@@ -49,7 +62,7 @@ p, span, small {
   padding: 0.01% 1%;
   background-color: transparent;
   width: 100%;
-  max-width: 300px; /* Puedes ajustar esto */
+  max-width: 300px;
 }
 
 .search-input {
@@ -70,21 +83,6 @@ p, span, small {
   cursor: pointer;
   color: #1C1C1C;
 }
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #2B2B2B;
-  font-size: 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav a:hover {
-  color: #DCC7A0;
-}
 
 .search__button {
   border: none;
@@ -101,11 +99,27 @@ p, span, small {
   width: 1.3em;
   fill: #b4b4b4;
 }
-.imgventa {
-    object-fit: contain;
-    width: 20%;
-    height: 10%;
+
+/* Navegación */
+
+.nav {
+  display: flex;
+  gap: 20px;
 }
+
+.nav a {
+  text-decoration: none;
+  color: #2B2B2B;
+  font-size: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #DCC7A0;
+}
+
+/* Tarjetas de productos */
+
 .card {
   border: none;
   border-radius: 12px;
@@ -115,6 +129,7 @@ p, span, small {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
 }
 
 .card:hover {
@@ -170,14 +185,20 @@ p, span, small {
   color: #fff;
 }
 
+/* Banner principal */
+
 .hero-banner {
   margin-top: -13px;
   height: 60vh;
   background: linear-gradient(to right, #fff9f4, #fceee6);
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .hero-text {
@@ -223,30 +244,15 @@ p, span, small {
   animation: zoomIn 1.5s ease;
 }
 
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
+/* Footer elegante */
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInDown {
-  from { opacity: 0; transform: translateY(-50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
 .footer {
   background-color: #f7f1ee;
   color: #5c4d4d;
   font-family: 'Poppins', sans-serif;
   border-top: 1px solid #dbcac0;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .footer a {
@@ -279,4 +285,101 @@ p, span, small {
 
 .footer i:hover {
   color: #8c6f5c;
+}
+
+/* Imagen logo */
+
+.logo {
+  height: 40px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Animaciones */
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .hero-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-img img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .search-container {
+    max-width: 90%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .card .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .footer .brand {
+    font-size: 1.2rem;
+  }
 }
