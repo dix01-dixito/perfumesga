@@ -1,5 +1,3 @@
-/* Base y estructura */
-
 header {
   background-color: gainsboro;
   border-bottom: 1px solid #DCC7A0;
@@ -381,5 +379,23 @@ p, span, small {
 
   .footer .brand {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 100%;
   }
 }
