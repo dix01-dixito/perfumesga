@@ -1,3 +1,5 @@
+/* Base y estructura */
+
 header {
   background-color: gainsboro;
   border-bottom: 1px solid #DCC7A0;
@@ -103,6 +105,7 @@ p, span, small {
 .nav {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -240,6 +243,8 @@ p, span, small {
 .hero-img img {
   max-width: 475px;
   animation: zoomIn 1.5s ease;
+  width: 100%;
+  height: auto;
 }
 
 /* Footer elegante */
@@ -289,8 +294,9 @@ p, span, small {
 
 .logo {
   height: 40px;
-  width: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Animaciones */
@@ -317,7 +323,7 @@ p, span, small {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero-banner {
     flex-direction: column;
     align-items: center;
@@ -332,21 +338,21 @@ p, span, small {
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
     font-size: 1rem;
   }
 
+  .hero-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .hero-img img {
     max-width: 90%;
     height: auto;
-  }
-
-  .hero-btn {
-    width: 100%;
-    max-width: 250px;
   }
 
   .nav {
@@ -380,22 +386,32 @@ p, span, small {
   .footer .brand {
     font-size: 1.2rem;
   }
-}
-@media (max-width: 768px) {
+
   header .container {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
+}
 
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .footer .tagline {
+    font-size: 0.85rem;
+  }
+
+  .nav a {
+    font-size: 14px;
   }
 
   .search-container {
-    width: 100%;
-    max-width: 100%;
+    padding: 0.5rem;
   }
 }
